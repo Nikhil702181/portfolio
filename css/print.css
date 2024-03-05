@@ -1,0 +1,277 @@
+html{scroll-behavior: smooth;} 
+body {margin:0; padding:0;font:normal 13px 'Nunito', sans-serif; color:#5b5b5b; line-height:normal;scroll-behavior: smooth;}
+#pre-loader{background:#6c6b6b3d url('../images/loader.gif')no-repeat center center;background-size:25%; height: 100vh;width: 100%;z-index: 100;position: fixed;} 
+img{max-width: 100%;width: auto;height: auto;}
+
+/*** GLOBAL SELECTORS ***/
+a{ color:#c81221; }
+a:hover{ color:#000000;} 
+
+.container{max-width: min(1290px, 96%);width: auto; margin:0 auto;} 
+.header{padding: 20px 0;position: absolute;left: 0;right: 0;}
+.header .topnav{display: flex;justify-content: space-between;align-items: center;}
+.header .topnav {font-size: 0}
+.header .topnav .logo{width: 20%;z-index:3;text-align: center;}
+.header .topnav .logo a{font-size: 25px;display: inline-block;padding: 5px;border: 2px solid #fff;box-sizing: border-box;color: #fff}
+.header .topnav .nav {width: 80%}
+.header .topnav .nav ul{font-size: 0;text-align: center;}
+.header .topnav .nav li{font-size: 16px;display: inline-block;vertical-align: middle;margin-left: 30px}
+.header .topnav .nav li a{font-size: 16px;font-weight: 400;color:#fff;display: inline-block;padding: 15px;box-sizing: border-box;position: relative;z-index: 3}
+.header .topnav .nav li a:after{position: absolute;content: '';width:0;height: 2px;background: #fff;left: 0;bottom: 0;z-index: -3;transition: 1s ease-in-out;}
+.header .topnav .nav li a:hover:after{width:100%;}
+
+#myHeader {transition: all 0.3s ease;}
+.header.fixed {position: fixed; top: 0;background-color: #fff;z-index: 3;box-shadow: 0 4px 15px -5px rgba(0, 0, 0, 0.1)}
+.header.fixed .topnav .logo a{color: #000;border:2px solid #000}
+.header.fixed .topnav li a{color:#000}
+.header.fixed .topnav .nav li a:after{background: #000;} 
+
+.header .topnav .toggle-menu{display: none;}
+.header .topnav .toggle-menu a{display: inline-block;}
+.header .topnav .toggle-menu a span{position: relative;display: block;width: 25px;height: 3px;background: #fff}
+.header .topnav .toggle-menu a span:before{position:absolute;content:'';width: 25px;height: 3px;background:#fff;top: -10px;left: 0}
+.header .topnav .toggle-menu a span:after{position:absolute;content:'';width: 25px;height: 3px;background:#fff;bottom: -10px;left: 0}
+.header.fixed .topnav .toggle-menu a span{position: relative;display: block;width: 25px;height: 3px;background: #000}
+.header.fixed .topnav .toggle-menu a span:before{position:absolute;content:'';width: 25px;height: 3px;background:#000;top: -10px;left: 0}
+.header.fixed .topnav .toggle-menu a span:after{position:absolute;content:'';width: 25px;height: 3px;background:#000;bottom: -10px;left: 0}
+ 
+.bannersection{background: url('../images/hero_img.jpg')no-repeat top center;background-size: cover;background-attachment: fixed; position: relative;min-height: 600px;height: 100vh}
+.bannersection:after{position:absolute;content:'';background: rgb(0 0 0 / 40%);left:0;right: 0;top: 0;bottom: 0;}
+.bannersection .caption{position: relative;z-index: 1;text-align: center;top: 0;transform: translateY(85%);min-height: 300px;height: 50vh;}
+.bannersection .caption h1{font-size: 50px;font-weight: 600;color: #fff;font-family: 'Varela Round', sans-serif;}
+.bannersection .caption h1 span{display: block;}
+.bannersection .caption h2{font-size:24px;font-weight: 600;color: #fff;font-family: 'Varela Round', sans-serif;margin-right: 20%}
+.bannersection .caption h2 span{display: unset;position: fixed;}
+
+.about{padding: 100px 0}
+.about .aboutwrap{display: flex;flex-wrap:wrap;align-items: center;justify-content: space-between;max-width: 1180px;margin: 0 auto;font-size: 0}
+.about .aboutwrap .aboutleft{width:60%;padding: 0 48px 0 15px;box-sizing: border-box;}
+.about .aboutwrap .aboutleft .imgbox{width:100%;position: relative;}
+.about .aboutwrap .aboutleft .imgbox:before{position: absolute;content:'';background: url('../images/dots.png')no-repeat top right;width: 304px;height: 264px;right: 0;top: 0;transform: translate(40%, -19%);z-index: -1}
+
+.about .aboutwrap .aboutright{width:40%;padding: 0 15px 0 48px;box-sizing: border-box}
+.about .aboutwrap .aboutright .bio h3{font-size: 48px;font-weight: 500;margin-bottom: 10px;font-family: 'Varela Round', sans-serif;color: #000}
+.about .aboutwrap .aboutright .bio p{font-size:16px;font-weight: 400;line-height: 26px;margin-bottom: 10px}
+.about .aboutwrap .aboutright .myskills ul {font-size:0;margin: 60px 0}
+.about .aboutwrap .aboutright .myskills li{width: 100%;font-size: 0}
+.about .aboutwrap .aboutright .myskills li h3{font-size:20px;font-weight: 500;line-height: 26px;margin-bottom: 5px;color: #000}
+.about .aboutwrap .aboutright .myskills li .progress{width: 100%;background: #e9ecef;border-radius: 5px;margin-bottom:35px}
+.about .aboutwrap .aboutright .myskills li .progress .html{background:#008000;width: 90%;height: 5px;border-radius: 2px;position: relative;}
+.about .aboutwrap .aboutright .myskills li .progress .css{background:#008000;width: 90%;height: 5px;border-radius: 2px;position: relative;}
+.about .aboutwrap .aboutright .myskills li .progress .wordpress{background:#008000;width: 20%;height: 5px;border-radius: 2px;position: relative;}
+.about .aboutwrap .aboutright .myskills li .progress .bootstrap{background:#008000;width: 50%;height: 5px;border-radius: 2px;position: relative;}
+.about .aboutwrap .aboutright .myskills li .progress .php{background:#008000;width: 20%;height: 5px;border-radius: 2px;position: relative;}
+.about .aboutwrap .aboutright .myskills li .progress .sql{background:#008000;width: 20%;height: 5px;border-radius: 2px;position: relative;}
+.about .aboutwrap .aboutright .myskills li .progress .photoshop{background:#008000;width: 30%;height: 5px;border-radius: 2px;position: relative;}
+.about .aboutwrap .aboutright .myskills li .progress .progressbar span{font-size: 12px;font-weight: 400;color: #fff;background:#008000;clip-path: polygon(50% 0, 50% 0, 100% 50%, 100% 100%, 0 100%, 0% 50%);position: absolute;bottom:-23px;padding: 7px;padding-bottom: 2px;right: -19px}
+.about .aboutwrap .aboutright .myskills .aboutbtn{text-align: center;}
+.about .aboutwrap .aboutright .myskills .aboutbtn a{font-size: 16px;font-weight:600;padding: 15px 40px;background: #008000;display:inline-block;color: #fff;border-radius: 30px}
+.about .aboutwrap .aboutright .myskills .aboutbtn a:hover{background: #008000bd}
+
+.work{padding: 100px 0;background: #f8f9fa;text-align: center;}
+.work h2{text-align: center;font-size: 50px;font-weight: 500;font-family: 'Varela Round', sans-serif;color: #000;margin-bottom: 5%}
+.work ul{font-size: 0;margin-left: -3%;margin-top:-3%}
+.work li{font-size: 16px;width: 30%; margin-left: 3%;margin-top:3%;display: inline-block;vertical-align: middle;box-shadow:1px 1px 30px 0px rgba(0,0,0,0.10);border-radius: 10px}
+.work li .workwrap .workimg{position: relative;cursor: pointer;}
+.work li .workwrap .workimg img{border-radius: 10px}
+.work li .workwrap .workimg:hover .role{opacity: 1;height: 100%}
+.work li .workwrap .role{position: absolute;left: 0;bottom: 0;text-align: center;border-radius:10px;background:#00000075;  z-index: 1;padding: 20px;box-sizing: border-box; overflow: hidden;height: 0;opacity: 0;transition: 0.5s}
+.work li .workwrap .role h5{font-size: 22px;font-weight: 600;text-align: center;color: #fff}
+.work li .workwrap .role p{font-size: 16px;font-weight: 400;color: #fff;line-height: 25px;margin-top: 20px}
+.work li .workwrap a{font-size: 20px;font-weight: 600;display: inline-block;color:#fff;text-align: center;border-radius: 30px;margin-top: 20px} 
+.work li .workwrap a:hover{color: #008000} 
+.work button{font-size: 30px;font-weight: 500;padding: 10px 70px;border-radius: 30px;background: #008000;color: #fff;border:none;margin: 5% 0 0 0}
+.work button:hover{background:#008000bd}
+
+.resume{padding: 100px 0}
+.resume h2{font-size: 48px;font-weight: 500;font-family:'varela Round',sans-serif;text-align: center;color: #000;margin-bottom: 5%}
+.resume .resumewrap{display: flex;flex-wrap: wrap;font-size: 0;max-width:1180px;margin: 0 auto;}
+.resume .resumewrap .resumeleft{width:34%;padding: 0 20px;box-sizing: border-box;text-align: center;}
+.resume .resumewrap .resumeleft a{font-size: 24px;font-weight: 500;color: #fff;padding: 10px 35px;background:#008000;border-radius: 30px;display: inline-block;margin-top: 30px}
+.resume .resumewrap .resumeleft a:hover{background: #008000bd}
+.resume .resumewrap .resumeright{width: 66%}
+.resume .resumewrap .resumeright ul{font-size: 0;padding:0 15px;margin-left: 100px}
+.resume .resumewrap .resumeright ul h4{font-size: 28px;font-weight: 500;color: #000;margin-bottom:5%}
+.resume .resumewrap .resumeright li{font-size: 16px;display: flex;flex-wrap: wrap; justify-content: space-between;padding-bottom: 20px;margin-bottom: 20px;border-bottom: 1px solid #00000070;}
+.resume .resumewrap .resumeright li .position h5{font-size: 18px;font-weight: 500;margin-bottom: 10px;}
+.resume .resumewrap .resumeright li .position .com-dtl{display: flex;}
+.resume .resumewrap .resumeright li .position .com-dtl p{font-size:14px;font-weight: 400;position: relative;padding-left: 30px;padding-right: 10px}
+.resume .resumewrap .resumeright li .position .company:after{position: absolute; content:'';background: url('../images/comp.png')no-repeat;width: 20px;height:20px;left:5px;}
+.resume .resumewrap .resumeright li .position .com-loc:after{position: absolute; content:'';background: url('../images/location.png')no-repeat;width: 20px;height:20px;left:5px;}
+.resume .resumewrap .resumeright li .workduration {text-align: right;}
+.resume .resumewrap .resumeright li .workduration h6{font-size:14px;font-weight: 400;padding:5px 30px;border-radius: 30px;color:#008000;background: #00800010;display: inline-block;text-align: end;margin-bottom: 5px}
+.resume .resumewrap .resumeright li .workduration p{font-size:14px;font-weight: 400;position: relative;padding-left: 30px}
+.resume .resumewrap .resumeright li .workduration p:after{position: absolute;content:'';background: url('../images/cal.png');width: 20px;height: 20px;left: 0;top:50%;transform: translateY(-50%);}
+.resume .resumewrap .resumeright ul h4.Education{font-size: 28px;font-weight: 500;color: #000;margin: 40px 0 25px;}
+.resume .resumewrap .resumeright li .position .name:after{position: absolute; content:'';background: url('../images/clg.png')no-repeat;width: 20px;height:20px;left:5px;top: 50%;transform: translateY(-50%);}
+
+.Contactform {padding:50px 0;max-width: 88%;margin: 0 auto;}
+.Contactform h2{font-size: 48px;font-weight: 500;font-family:'varela Round',sans-serif;text-align: center;color: #000;margin-bottom: 5%}
+.Contactform .Contactwrap{display: flex;flex-wrap: wrap;font-size:0;justify-content:space-between;}
+.Contactform .Contactwrap .formsec{width: 60%;font-size: 16px}
+.Contactform .Contactwrap .formsec .namesec{display: flex;justify-content: space-between;}
+.Contactform .Contactwrap .formsec label{line-height: 30px}
+.Contactform .Contactwrap .formsec .namesec .fname{width:47%;}
+.Contactform .Contactwrap .formsec .namesec .lname{width:47%;}
+.Contactform .Contactwrap .formsec input{border-bottom: 1px solid #000!important;width: 100%;height: 45px;border: unset;outline:none;padding: 5px 0;font-size: 16px;font-weight: 400;font-family:'varela Round',sans-serif;box-sizing: border-box;margin: 10px 0 15px}
+.Contactform .Contactwrap .formsec textarea{border-bottom: 1px solid #000!important;width: 100%;height: 122px;border: unset;outline:none;padding: unset;font-size: 16px;font-weight: 400;font-family:'varela Round',sans-serif;margin: 10px 0 15px;padding: 5px 0;}
+.Contactform .Contactwrap .formsec button{border: none;background: unset;font-size: 14px;font-weight:500;background: #008000;color: #fff;padding: 10px 35px;border-radius: 30px}
+.Contactform .Contactwrap .formsec button:hover{background:#008000bd}
+
+.Contactform .Contactwrap .contactdetail{width: 40%;font-size: 16px}
+.Contactform .Contactwrap .contactdetail .cntdtlwrap{margin-left: 25%}
+.Contactform .Contactwrap .contactdetail .cntdtlwrap h5{font-size: 20px;font-weight: 500;color: #000;}
+.Contactform .Contactwrap .contactdetail .cntdtlwrap ul{font-size: 0;margin: 25px 0 0}
+.Contactform .Contactwrap .contactdetail .cntdtlwrap li{font-size: 16px;margin-top: 20px}
+.Contactform .Contactwrap .contactdetail .cntdtlwrap li a{padding: 0 0 0 30px;display: inline-block;font-size: 16px;font-weight: 400;color: #008000;position: relative;}
+.Contactform .Contactwrap .contactdetail .cntdtlwrap li a.add:before{position:absolute;content:'';background: url('../images/location.png')no-repeat; left: 8px;top:-50%;transform: translateY(50%); width: 100%;height:100%}
+.Contactform .Contactwrap .contactdetail .cntdtlwrap li a.tel:before{position:absolute;content:'';background: url('../images/call.png')no-repeat; left: 8px;top:-50%;transform: translateY(50%); width: 100%;height:100%}
+.Contactform .Contactwrap .contactdetail .cntdtlwrap li a.mail:before{position:absolute;content:'';background: url('../images/mail.png')no-repeat; left: 8px;top:-50%;transform: translateY(50%); width: 100%;height:100%}
+
+.slider {padding: 50px 0;background: #f8f9fa}
+.item img {width:50%!important;height: auto;margin-left: 30px}
+
+.footer{padding: 50px 0;background:#efefef}
+.footer .ftrwrap{font-size: 0;display: flex;flex-wrap: wrap;}
+.footer .ftrdtl{width: 40%;display: inline-block;vertical-align: top;padding: 0 75px;box-sizing: border-box;}
+.footer .ftrdtl h3{font-size: 16px;font-weight: 400;color: #000}
+.footer .ftrdtl p{font-size: 14px;font-weight: 400;}
+.footer .ftrdtl .media{margin: 30px 0}
+.footer .ftrdtl .media ul h5{font-size: 16px;font-weight: 400;color: #000}
+.footer .ftrdtl .media ul li{display: inline-block;margin-left: 1%}
+.footer .ftrdtl .media ul li a{font-size: 16px;font-weight: 400;}
+.fb,.link,.twtr,.insta{margin: 40% 0 0 0;background: url('../images/media.png') no-repeat top center;width:46px; height:46px; display: inline-block;}
+
+.fb{background-position: 16px -26px;background-color: #00000050;border-radius: 50%;}
+.fb:hover{background-position: 16px 11px;background-color: #fff;border-radius: 50%;}
+
+.link{background-position: -30px -26px;background-color: #00000050;border-radius: 50%;}
+.link:hover{background-position: -30px 11px;background-color: #fff;border-radius: 50%;}
+
+.twtr{background-position: -80px -26px;background-color: #00000050;border-radius: 50%;}
+.twtr:hover{background-position: -80px 11px;background-color: #fff;border-radius: 50%;}
+
+.insta{background-position: -133px -26px;background-color: #00000050;border-radius: 50%;}
+.insta:hover{background-position: -133px 11px;background-color: #fff;border-radius: 50%;}
+
+.footer .ftrlist{width: 60%;display: inline-block;vertical-align: top;}
+.footer .ftrlist ul{font-size: 0}
+.footer .ftrlist li{width: 50%;display: inline-block;vertical-align: top;text-align: left;}
+.footer .ftrlist li h3{font-size: 16px;font-weight: 400;color: #000;}
+.footer .ftrlist li ul li{font-size: 16px;margin-top: 20px;display:block;width: 100%}
+.footer .ftrlist li ul li a{font-size: 16px;font-weight: 400;display:block;color: #777}
+
+#scrollToTopBtn {display: none;position: fixed;bottom: 20px;right: 20px;color: #fff;font-weight: 500; background: #008000;clip-path: polygon(50% 0%, 72% 16%, 100% 35%, 100% 70%, 100% 100%, 50% 100%, 0 100%, 0% 70%, 0% 35%, 25% 17%); width: 50px;height: 40px;border: none;cursor: pointer;animation: bounce 3s infinite;z-index: 1}
+@keyframes bounce { 0%, 20%, 50%, 80%, 100% {transform: translateY(0);}40% {transform: translateY(-20px);}60% {transform: translateY(-10px);}}
+#scrollToTopBtn:hover {animation: none;background: #008000bd}
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+ 
+@media only screen and ( max-width: 1024px ) {
+	.bannersection .caption h1{font-size: 45px}
+	.about{padding: 10% 0}
+	.about .aboutwrap .aboutright{padding-left: 30px}
+	.work{padding: 10% 0}
+	.work li .workwrap .role p{margin-top: 0;line-height: 21px;font-size: 15px}
+	.resume{padding: 10% 0}
+	.resume .resumewrap .resumeright li .workduration.edu{margin-top: 20px}
+}
+@media only screen and ( max-width: 980px ) {
+	.resume .resumewrap{align-items: center;} 
+}
+@media only screen and ( max-width: 800px ) {
+	#pre-loader{background-size: 35%}
+	.header .topnav .nav {position: absolute; top: 0; right: 0; background-color: #fff;z-index: 3;transform: translateX(100%);width: 0;animation: NavSlider 0.3s ease-in-out;overflow: hidden;height:auto;display: none;}
+	@keyframes NavSlider{
+		from{transform: translateX(100%); }
+		to{transform: translateX(0);}
+	}
+	.header .topnav .nav.show {transform: translateX(0);width: 50%;height:100vh;display: block;position: absolute;}
+	.header .topnav .nav ul{width: 100%;height: 100vh}
+	.header .topnav .nav li{display:block;margin: 0;}
+	.header .topnav .nav li:hover{background: #8d7a5a59}
+	.header .topnav .nav li a{color: #000;padding:20px 0;display: block;}
+	.header .topnav .nav li a:after{display: none;}
+	.header .topnav .nav li a:hover{color: #008000}
+	.header .topnav .toggle-menu{display:block;z-index:3;position: relative;right: 10%;}
+	.header .topnav .toggle-menu a{font-size: 25px;cursor: pointer;color: #000;padding: 10px 2px;}
+	.header .topnav .toggle-menu a.menu-open span{padding: 0;background:none;top: 7px}
+	.header .topnav .toggle-menu a.menu-open span:before {transform:rotate(-45deg) translate(0px, 5px);width: 25px;transition: 0.3s}
+	.header .topnav .toggle-menu a.menu-open span:after { transform:rotate(45deg) translate(-8px, -14px);width: 25px;transition: 0.3s}
+	.header .topnav .toggle-menu a.menu-open span:before{background: #000;}
+	.header .topnav .toggle-menu a.menu-open span:after{background: #000;}
+	.bannersection{background-attachment:unset;}
+	.about .aboutwrap .aboutleft{width: 100%;padding:0 40px}
+	.about .aboutwrap .aboutleft .imgbox:before{transform: translate(15%, -19%);}
+	.about .aboutwrap .aboutright{width: 100%;margin: 10px 0 0 0}
+	.about .aboutwrap .aboutright .bio h3{font-size: 30px;}
+	.work h2{font-size: 42px}
+	.work li{width: 47%}
+	.resume h2{font-size: 40px}
+	.resume .resumewrap .resumeleft{width: 100%}
+	.resume .resumewrap .resumeright{width: 100%;margin-top: 3%}
+	.resume .resumewrap .resumeright ul{margin: 4% 0 0 0}
+	.resume .resumewrap .resumeright li .workduration.edu{margin-top: 0}
+	.Contactform .Contactwrap .formsec{width: 100%}
+	.Contactform .Contactwrap .contactdetail{width: 100%}
+	.Contactform .Contactwrap .contactdetail .cntdtlwrap{margin:5% 0 0 0 }
+	.footer .ftrdtl{width: 50%}
+	.footer .ftrlist{width: 50%}
+} 
+@media only screen and ( max-width: 736px ) {
+	.Contactform h2{font-size: 40px}
+}
+@media only screen and ( max-width: 667px ) {
+	.bannersection .caption h1{font-size: 40px} 
+	.bannersection .caption h2{font-size: 20px} 
+	.footer .ftrdtl{padding: 0 40px}
+} 
+@media only screen and ( max-width: 600px ) {
+	.about .aboutwrap .aboutright .myskills .aboutbtn a{padding: 10px 40px}
+	.work h2{font-size: 35px}
+	.work button{font-size: 25px;padding: 8px 59px}
+	.resume h2{font-size: 35px}
+	.resume .resumewrap .resumeleft a{font-size: 22px;padding: 8px 35px}
+	.resume .resumewrap .resumeright ul h4{font-size: 25px}
+	.resume .resumewrap .resumeright li .workduration.edu{margin-top: 20px;}
+	.resume .resumewrap .resumeright li .position h5{font-size: 16px}
+} 
+@media only screen and ( max-width: 480px ) {
+	#pre-loader{background-size: 45%}
+	.header .topnav .nav.show{width: 100%}
+	.bannersection .caption h1{font-size: 30px}
+	.about .aboutwrap .aboutright .myskills .aboutbtn a{padding: 10px 40px}
+	.work ul{margin-left: 0;margin-top: -5%}
+	.work li{width: 80%;margin-left: 0;margin-top: 5%}
+	.resume{padding: 10% 0 0 0}
+	.resume .resumewrap .resumeright li .workduration{width: 100%; margin-top: 20px; display: flex;flex-direction: row-reverse;justify-content: space-between;align-items: center;}
+	.resume .resumewrap .resumeright li .workduration p:after{top: 0;transform:translateY(0);}
+	.resume .resumewrap .resumeright li .workduration.edu{display:inline-block;text-align: unset;}
+	.item img {width:70%!important;height: auto;margin-left:15px}
+	.footer .ftrdtl{width: 100%;padding: 0}
+	.footer .ftrlist{width: 100%}
+	.footer .ftrlist li ul li a{font-size: 15px} 
+}
+@media only screen and ( max-width: 414px ) {
+	.header .topnav .logo a{font-size: 22px}
+	.bannersection .caption h1{font-size: 27px}
+	.bannersection .caption h2{font-size: 18px}
+	.about .aboutwrap .aboutright .bio h3{font-size: 25px}
+	.about .aboutwrap .aboutright .myskills li h3{font-size: 17px}
+	.Contactform h2{font-size: 32px}
+} 
+@media only screen and ( max-width: 375px ) {
+	#pre-loader{background-size: 65%}
+	.work h2{font-size: 30px}
+	.work button{font-size: 22px}
+	.resume h2{font-size: 30px}
+	.resume .resumewrap .resumeleft a{font-size: 20px}
+}
+@media only screen and ( max-width: 360px ) {
+	.bannersection .caption h2{font-size: 16px}
+	.resume .resumewrap .resumeright li .workduration{flex-wrap: wrap;flex-direction: unset;}
+	.resume .resumewrap .resumeright li .workduration h6{margin-bottom: 10px}
+}
+@media only screen and ( max-width: 320px ) {
+	.work li{width: 90%}
+	.item img {width:80%!important;height: auto;margin-left: 0}
+} 
